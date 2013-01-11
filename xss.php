@@ -1,6 +1,4 @@
 <?php
-	if (isset($_POST['Enviar'])) 
-	{
 		echo $_POST['texto'];
-	}
 ?>
+<a href="#">Click aqui</a>
