@@ -4,7 +4,18 @@
 	<title>Ejemplo de XSS</title>
 	</head>
 	<body>
-	<?php echo $_POST['texto'];?>
+	<?php
+		//metodos de filtrado
+		$filtrado="/<script[^>]+scr/i";
+		if(preg_match($filtrado, $_GET['texto']))
+		{
+			echo "Filtered";
+		}
+		else
+		{
+			echo $_GET['texto'];
+		}
+	?>
 	<a href="#">Click aqui</a>
 	</body>
 </html>

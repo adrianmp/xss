@@ -4,7 +4,7 @@
 	<title>Ejemplo de XSS</title>
 	</head>
 	<body>
-	<a href='s2.php?texto=<script>window.onload = function(){ 
+	<a href='s2.php?texto=HOLA<script>window.onload = function(){ 
 	var AllLinks=document.getElementsByTagName("a");
 	AllLinks[0].href = "hola.txt"; } </script>'>aqui </a>
 		<form action="xss.php" method="POST">
