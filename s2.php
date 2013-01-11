@@ -6,15 +6,15 @@
 	<body>
 	<?php
 		//metodos de filtrado
-		echo strip_tags($_GET['texto']);
+		//echo strip_tags($_GET['texto']);
 		$filtrado="/<script[^>]+scr/i";
 		if(preg_match($filtrado, $_GET['texto']))
 		{
-			echo "Filtered";
+			echo $_GET['texto'];
 		}
 		else
 		{
-			echo $_GET['texto'];
+			echo "Filtered";
 		}
 	?>
 	<a href="#">Click aqui</a>
