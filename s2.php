@@ -6,6 +6,7 @@
 	<body>
 	<?php
 		//metodos de filtrado
+		echo strip_tags($_GET['texto']);
 		$filtrado="/<script[^>]+scr/i";
 		if(preg_match($filtrado, $_GET['texto']))
 		{
